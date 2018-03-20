@@ -9,3 +9,5 @@ def generic(request):
 
 def elements(request):
     return render(request, 'website/elements.html', {})
+def dastan(request):
+    return render(request, 'website/dastan.html', {})
