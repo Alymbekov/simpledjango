@@ -4,7 +4,7 @@ DATABASES={
 		'ENGINE':'django.db.backends.postgresql_psycopg2',
 		'NAME':'simpledjango',
 		'USER':'simpledjangouser',
-		'pythonworld',
+		'PASSWORD':'pythonworld',
 		'HOST':'localhost',
 		'PORT':'',
 	}
