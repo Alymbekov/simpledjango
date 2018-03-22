@@ -25,7 +25,7 @@ SECRET_KEY = 'wn5t=nc-3+g)w3y2=6f_p=i&^x8ef)1!&er_bi5!a82=-2c6=_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','.dastan.tk','46.101.238.193']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','.dastan.tk','138.197.190.176']
 
 
 # Application definition
