@@ -15,9 +15,9 @@ ExecStart=/home/django/simpledjango/env/bin/gunicorn \
           --access-logfile /home/django/simpledjango/logs/access.log \
           --error-logfile /home/django/simpledjango/logs/error.log \
           --pid /run/gunicorn/pid   \
-          --env DJANGO_SETTINGS_MODULE=mysite.settings_prod \
+          --env DJANGO_SETTINGS_MODULE=main.settings_prod \
           --workers 3 \
-          --bind unix:/run/gunicorn/simpledjango_socket mysite.wsgi:application
+          --bind unix:/run/gunicorn/simpledjango_socket main.wsgi:application
 ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s TERM $MAINPID
 PrivateTmp=true
