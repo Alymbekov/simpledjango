@@ -4,10 +4,12 @@ Requires=gunicorn_simpledjango.socket
 After=network.target
 
 [Service]
-PIDFile=/run/gunicorn/pid
+PermissionsStartOnly=True
 User=dastan
 Group=www-data
 RuntimeDirectory=gunicorn
+RuntimeDirectoryMode=0775
+PIDFile=/run/gunicorn/pid
 WorkingDirectory=/home/dastan/simpledjango
 ExecStart=/home/dastan/simpledjango/env/bin/gunicorn \
           --access-logfile /home/dastan/simpledjango/logs/access.log \
