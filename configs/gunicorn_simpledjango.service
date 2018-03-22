@@ -5,15 +5,15 @@ After=network.target
 
 [Service]
 PermissionsStartOnly=True
-User=dastan
+User=django
 Group=www-data
 RuntimeDirectory=gunicorn
 RuntimeDirectoryMode=0775
 PIDFile=/run/gunicorn/pid
-WorkingDirectory=/home/dastan/simpledjango
-ExecStart=/home/dastan/simpledjango/env/bin/gunicorn \
-          --access-logfile /home/dastan/simpledjango/logs/access.log \
-          --error-logfile /home/dastan/simpledjango/logs/error.log \
+WorkingDirectory=/home/django/simpledjango
+ExecStart=/home/django/simpledjango/env/bin/gunicorn \
+          --access-logfile /home/django/simpledjango/logs/access.log \
+          --error-logfile /home/django/simpledjango/logs/error.log \
           --pid /run/gunicorn/pid   \
           --env DJANGO_SETTINGS_MODULE=main.settings_prod \
           --workers 3 \
